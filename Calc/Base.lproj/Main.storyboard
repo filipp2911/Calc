@@ -1,24 +1,305 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QKW-S7-Qu4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="4Be-BM-rOn">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="QKW-S7-Qu4" customClass="ViewController" customModule="Pink_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cUs-gs-aof"/>
+                        <viewControllerLayoutGuide type="bottom" id="MME-sO-s6K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nTV-V2-dGJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="MrL-MI-pjx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="khY-oE-IiR">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="pCB-EM-jak">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="105.5"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="88"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.93926091779999998" green="0.94023654590000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="dGb-IU-fez">
+                                                <rect key="frame" x="0.0" y="110.5" width="414" height="707.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="o7i-Bt-yKm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="140.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59L-2D-HiE">
+                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="140.5"/>
+                                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                                                <state key="normal" title="AC">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.73591549300000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="titleShadowColor" red="0.01251811418" green="0.0" blue="0.033698996109999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="returnToZero:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="wpE-nl-zI6"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmr-Ys-Kpa">
+                                                                <rect key="frame" x="104" y="0.0" width="102.5" height="140.5"/>
+                                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                                                <state key="normal" title="±">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.73591549300000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="performOperation:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="4pd-yQ-A7T"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqY-um-9H9">
+                                                                <rect key="frame" x="207.5" y="0.0" width="103" height="140.5"/>
+                                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                                                <state key="normal" title="%">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.73591549300000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="performOperation:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="hs0-Cz-nIB"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhK-6W-3A7">
+                                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="140.5"/>
+                                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                                <state key="normal" title="÷">
+                                                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="titleShadowColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="performOperation:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="b8i-Xg-6xP"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ivq-nv-Ad9">
+                                                        <rect key="frame" x="0.0" y="141.5" width="414" height="141"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vx-zy-y1z">
+                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="141"/>
+                                                                <color key="backgroundColor" red="0.98958333330000003" green="1" blue="1" alpha="0.74997324489999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                                <state key="normal" title="7">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.73591549300000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="touchDigit:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="stk-zX-1Mb"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="py6-dj-y81">
+                                                                <rect key="frame" x="104" y="0.0" width="102.5" height="141"/>
+                                                                <color key="backgroundColor" red="0.98958333330000003" green="1" blue="1" alpha="0.74997324489999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                                <state key="normal" title="8">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.73591549300000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="touchDigit:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="LIn-du-vYi"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1W-KB-VpT">
+                                                                <rect key="frame" x="207.5" y="0.0" width="103" height="141"/>
+                                                                <color key="backgroundColor" red="0.98958333330000003" green="1" blue="1" alpha="0.74997324489999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                                <state key="normal" title="9">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.73591549300000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="touchDigit:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="a5a-cg-2lB"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4OY-dU-Cvu">
+                                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="141"/>
+                                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                                <state key="normal" title="×">
+                                                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="titleShadowColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="performOperation:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="O11-IU-GNr"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="TOL-65-dwp">
+                                                        <rect key="frame" x="0.0" y="283.5" width="414" height="140.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWN-5g-hIM">
+                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="140.5"/>
+                                                                <color key="backgroundColor" red="0.98958333330000003" green="1" blue="1" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                                <state key="normal" title="4">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.73591549300000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="touchDigit:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="NuC-HC-tnW"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKo-bT-31Z">
+                                                                <rect key="frame" x="104" y="0.0" width="102.5" height="140.5"/>
+                                                                <color key="backgroundColor" red="0.98958333330000003" green="1" blue="1" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                                <state key="normal" title="5">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.73591549300000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="touchDigit:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="B7P-iC-yPB"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvG-Ca-Ecq">
+                                                                <rect key="frame" x="207.5" y="0.0" width="103" height="140.5"/>
+                                                                <color key="backgroundColor" red="0.98958333330000003" green="1" blue="1" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                                <state key="normal" title="6">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.73591549300000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="touchDigit:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="CKz-yX-NKf"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHX-i1-1Ic">
+                                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="140.5"/>
+                                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                                <state key="normal" title="-">
+                                                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="titleShadowColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="performOperation:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="rgY-xf-wCS"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="MUZ-Qg-2IV">
+                                                        <rect key="frame" x="0.0" y="425" width="414" height="141"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7Z-2I-sBD">
+                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="141"/>
+                                                                <color key="backgroundColor" red="0.98958333330000003" green="1" blue="1" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                                <state key="normal" title="1">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.73591549300000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="touchDigit:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="bPJ-7U-9ZN"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCF-HP-W76">
+                                                                <rect key="frame" x="104" y="0.0" width="102.5" height="141"/>
+                                                                <color key="backgroundColor" red="0.98958333330000003" green="1" blue="1" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                                <state key="normal" title="2">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.73591549300000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="touchDigit:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="E6e-uq-ho1"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHM-zq-VjL">
+                                                                <rect key="frame" x="207.5" y="0.0" width="103" height="141"/>
+                                                                <color key="backgroundColor" red="0.98958333330000003" green="1" blue="1" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                                <state key="normal" title="3">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.73591549300000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="touchDigit:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="BWF-U3-lzV"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lm0-A2-y2y">
+                                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="141"/>
+                                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                                <state key="normal" title="+">
+                                                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="titleShadowColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="performOperation:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="sVn-AD-5Fp"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="xa0-9c-FZI">
+                                                        <rect key="frame" x="0.0" y="567" width="414" height="140.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kr-tG-Q2d">
+                                                                <rect key="frame" x="0.0" y="0.0" width="137.5" height="140.5"/>
+                                                                <color key="backgroundColor" red="0.98958333330000003" green="1" blue="1" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                                <state key="normal" title="0">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.73591549300000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="touchDigit:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="XiG-3S-l39"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwG-py-J9X">
+                                                                <rect key="frame" x="138.5" y="0.0" width="137" height="140.5"/>
+                                                                <color key="backgroundColor" red="0.77033883329999997" green="0.77973252530000003" blue="0.7799539566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                                                <state key="normal" title=".">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.73591549300000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="performOperation:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="Rwl-4a-91e"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6G-6D-1Ri">
+                                                                <rect key="frame" x="276.5" y="0.0" width="137.5" height="140.5"/>
+                                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                                <state key="normal" title="=">
+                                                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="performOperation:" destination="QKW-S7-Qu4" eventType="touchUpInside" id="M6V-dp-LGI"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eg1-oc-hdv"/>
+                        <color key="backgroundColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="0.90750749139999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eg1-oc-hdv" firstAttribute="trailing" secondItem="MrL-MI-pjx" secondAttribute="trailing" id="03u-WN-XHd"/>
+                            <constraint firstItem="MME-sO-s6K" firstAttribute="top" secondItem="MrL-MI-pjx" secondAttribute="bottom" id="Wkr-WJ-1pF"/>
+                            <constraint firstItem="MrL-MI-pjx" firstAttribute="leading" secondItem="nTV-V2-dGJ" secondAttribute="leadingMargin" constant="-20" id="en0-6F-qth"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MrL-MI-pjx" secondAttribute="trailing" constant="-5" id="giY-1M-ZiW"/>
+                            <constraint firstItem="MrL-MI-pjx" firstAttribute="top" secondItem="cUs-gs-aof" secondAttribute="bottom" id="tRX-oN-yAn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="display" destination="pCB-EM-jak" id="fLk-Ic-ccp"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XfN-Er-zvn" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1586" y="224"/>
         </scene>
     </scenes>
 </document>
